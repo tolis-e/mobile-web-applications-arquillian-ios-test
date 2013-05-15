@@ -3,6 +3,8 @@ This project contains the functional tests for the [Kitchensink HTML5 Mobile Dem
 
 The [Arquillian](http://arquillian.org/) testing platform is used to enable the testing automation. Arquillian integrates transparently with the testing framework which is JUnit in this case.
 
+You can find [here](https://vimeo.com/66230461) a relevant video which shows the execution of the current project through [Jenkins CI](http://jenkins-ci.org/). Mac OS does not support the running of multiple iOS simulators at the same time. A possible way to cope with this limitation is to use a plugin which locks the Jenkins iOS jobs so that they are not executed simultaneously. However there are other alternative ways to accomplish the serial jobs execution. 
+
 ## Functional Test Content
 The Kitchensink HTML5 Mobile iOS Functional Test defines the three core aspects needed for the execution of an [Arquillian](http://arquillian.org/) test case:
 
