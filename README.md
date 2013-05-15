@@ -21,9 +21,9 @@ The [POM](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test
 * arq-jboss-managed — managed container 
 * arq-jboss-remote — remote container
 
-By default the arq-jboss-managed (managed container) profile is active. An Arquillian maanged container is a container whose lifecycle is managed by Arquillian. In order to use the remote container profile, activate the corresponding profile in the [POM](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/pom.xml) file and set the default="true" flag on the jboss-remote configuration in the [Arquillian XML](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/src/test/resources/arquillian.xml) file. Set the flag to false for the jboss-managed configuration as well.
+By default the arq-jboss-managed (managed container) profile is active. An Arquillian managed container is a container whose lifecycle is managed by Arquillian. In order to use the remote container profile, activate the corresponding profile in the [POM](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/pom.xml) file and set the default="true" flag on the jboss-remote configuration in the [Arquillian XML](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/src/test/resources/arquillian.xml) file. Set the flag to false for the jboss-managed configuration as well.
 
-The configuration regarding the iOS simulator resides inside the [POM](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/pom.xml) and the system properties are propagated to the [Arquillian XML](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/src/test/resources/arquillian.xml).
+The configuration regarding the iOS simulator resides inside the [POM](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/pom.xml) and the system properties are propagated to the [Arquillian XML](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/src/test/resources/arquillian.xml). As mentioned in the Arquillian iOS Extension README file, the Arquillian iOS extension's configuration inside the Arquillian XML, might change in the future.
 
 	<!-- Value should be iphone or ipad -->
     <property>
