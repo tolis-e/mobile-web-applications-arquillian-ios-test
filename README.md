@@ -1,5 +1,5 @@
 # Kitchensink HTML5 Mobile iOS Functional Test
-This project contains the functional tests for the [Kitchensink HTML5 Mobile Demo](https://github.com/jboss-jdf/jboss-as-quickstart/tree/master/kitchensink-html5-mobile) project on iOS. The purpose of the project is to demonstrate how to test a mobile web application on iOS using the [Arquillian](http://arquillian.org/) testing platform.
+This project contains the functional tests for the [Kitchensink HTML5 Mobile Demo](https://github.com/jboss-jdf/jboss-as-quickstart/tree/master/kitchensink-html5-mobile) project on iOS. The purpose of the project is to demonstrate how to test a mobile web application on iOS using the [Arquillian](http://arquillian.org/) testing platform. Note that the [Arquillian iOS Extension](https://github.com/arquillian/arquillian-extension-ios) is not released on the Maven Central repository yet and its XML configuration might change in the future.
 
 The [Arquillian](http://arquillian.org/) testing platform is used to enable the testing automation. Arquillian integrates transparently with the testing framework which is JUnit in this case.
 
