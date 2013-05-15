@@ -21,6 +21,32 @@ The [POM](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test
 
 By default the arq-jboss-managed (managed container) profile is active. An Arquillian maanged container is a container whose lifecycle is managed by Arquillian. In order to use the remote container profile, activate the corresponding profile in the [POM](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/pom.xml) file and set the default="true" flag on the jboss-remote configuration in the [Arquillian XML](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/src/test/resources/arquillian.xml) file. Set the flag to false for the jboss-managed configuration as well.
 
+The configuration regarding the iOS emulator resides inside the [POM](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/pom.xml) and the system properties are propagated to the [Arquillian XML](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/src/test/resources/arquillian.xml).
+
+	<!-- Value should be iphone or ipad -->
+    <property>
+        <name>arq.ios.family</name>
+        <value>iphone</value>
+    </property>
+    <!-- SDK version -->
+    <property>
+        <name>arq.ios.sdk</name>
+        <value>6.0</value>
+    </property>
+    <!-- local copy of Selenium SVN repository -->
+    <property>
+        <name>arq.ios.drone.localSeleniumCopy</name>
+        <value>/Users/jboss/Workspace/selenium-read-only</value>
+    </property>
+    <property>
+        <name>arq.webdriver.remote.address</name>
+        <value>http://localhost:3001/wd/hub</value>
+    </property>
+    <property>
+        <name>arq.webdriver.remote</name>
+        <value>true</value>
+    </property>
+
 For convenience reasons, the mobile application's WAR is included in the project. You can find it inside the src/test/resources/assets folder. 
 
 ## Development approach/methodologies
