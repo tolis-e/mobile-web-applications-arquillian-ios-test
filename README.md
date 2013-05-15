@@ -12,8 +12,6 @@ The Kitchensink HTML5 Mobile iOS Functional Test defines the three core aspects 
 
 The container's configuration resides in the [Arquillian XML](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/src/test/resources/arquillian.xml) configuration file while the deployment and the archive are defined in the [Deployments](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/src/test/java/org/jboss/as/quickstarts/test/kitchensink/html5/mobile/demo/Deployments.java) file.
 
-[Arquillian XML](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/src/test/resources/arquillian.xml) is configured to recognize the Android Emulator using some variables which are placed into the build environment from the Jenkins [Android Emulator Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Android+Emulator+Plugin).
-
 The test case is dispatched to the container's environment through coordination with ShrinkWrap, which is used to declaratively define a custom Java EE archive that encapsulates the test class and its dependent resources. Arquillian packages the ShrinkWrap defined archive at runtime and deploys it to the target container. It then negotiates the execution of the test methods and captures the test results using remote communication with the server. Finally, Arquillian undeploys the test archive.
 
 The [POM](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/pom.xml) file contains two profiles:
