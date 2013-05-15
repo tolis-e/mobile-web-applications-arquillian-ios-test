@@ -23,6 +23,8 @@ By default the arq-jboss-managed (managed container) profile is active. An Arqui
 
 For convenience reasons, the mobile application's WAR is included in the project. You can find it inside the src/test/resources/assets folder. 
 
+This example has been tested on Mac OS X version 10.8.2.
+
 ## Development approach/methodologies
 The development approach is driven from the desire to decouple the testing algorithmic steps / scenarios from the implementation which is tied to a specific DOM structure. For that reason the Page Objects and Page Fragments patterns are used. The Page Objects pattern is used to encapsulate the tested page's structure into one class which contains all the page's parts together with all methods which you will find useful while testing it. The Page Fragments pattern encapsulates parts of the tested page into reusable pieces across all your tests.
 
