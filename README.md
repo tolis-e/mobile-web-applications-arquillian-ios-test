@@ -65,7 +65,7 @@ The execution of the functional test is done through maven:
     mvn test    
     
 ## Important Notes
-As mentioned in the [Arquillian iOS Extension README](https://github.com/arquillian/arquillian-extension-ios/blob/master/README.md) file, the configuration inside the Arquillian XML might change in the future.
+As mentioned in the [Arquillian iOS Extension README](https://github.com/arquillian/arquillian-extension-ios/blob/master/README.md) file, the **configuration** inside the **Arquillian XML might change** in the future.
 
 This example has been tested on Mac OS X version 10.8.2.
 
