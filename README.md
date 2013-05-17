@@ -3,7 +3,7 @@ This project contains the functional tests for the [Kitchensink HTML5 Mobile Dem
 
 The project is configured to run on [TravisCI](https://travis-ci.org/). In each execution the test is executed on iPhone simulator and multiple SDKs (5.0, 6.1). You can add more executions by modifying the [POM](https://github.com/tolis-e/mobile-web-applications-arquillian-ios-test/blob/master/pom.xml).
 
-[![Build Status](https://travis-ci.org/tolis-e/mobile-web-applications-arquillian-ios-test.png?branch=master)](https://travis-ci.org/tolis-e/aerogear-controller-demo-travis-ci)
+[![Build Status](https://travis-ci.org/tolis-e/mobile-web-applications-arquillian-ios-test.png?branch=master)](https://travis-ci.org/tolis-e/mobile-web-applications-arquillian-ios-test)
 
 The [Arquillian](http://arquillian.org/) testing platform is used to enable the testing automation. Arquillian integrates transparently with the testing framework which is JUnit in this case.
 
