@@ -194,7 +194,7 @@
                                         <arq.ios.sdk>5.0</arq.ios.sdk>
                                         <!-- local copy of Selenium SVN repository -->
                                         <arq.ios.drone.localSeleniumCopy>/Users/jboss/Workspace/selenium-read-only</arq.ios.drone.localSeleniumCopy>
-                                        <arq.webdriver.remote.address>http://localhost:3001/wd/hub<arq.webdriver.remote.address>
+                                        <arq.webdriver.remote.address>http://localhost:3001/wd/hub</arq.webdriver.remote.address>
                                         <arq.webdriver.remote>true</arq.webdriver.remote>
                                     </systemPropertyVariables>
                                 </configuration>
@@ -214,7 +214,7 @@
                                         <arq.ios.sdk>6.1</arq.ios.sdk>
                                         <!-- local copy of Selenium SVN repository -->
                                         <arq.ios.drone.localSeleniumCopy>/Users/jboss/Workspace/selenium-read-only</arq.ios.drone.localSeleniumCopy>
-                                        <arq.webdriver.remote.address>http://localhost:3001/wd/hub<arq.webdriver.remote.address>
+                                        <arq.webdriver.remote.address>http://localhost:3001/wd/hub</arq.webdriver.remote.address>
                                         <arq.webdriver.remote>true</arq.webdriver.remote>
                                     </systemPropertyVariables>
                                 </configuration>
