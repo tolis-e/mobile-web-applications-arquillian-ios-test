@@ -197,6 +197,38 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.12</version>
+                        <configuration>
+                            <systemProperties>
+                                <!-- You can pass the values dynamically as environment variables or options instead of hardcoding them. -->
+                                <!-- Value should be iphone or ipad -->
+                                <property>
+                                    <name>arq.ios.family</name>
+                                    <value>${env.IOS_FAMILY}</value>
+                                </property>
+                                <!-- SDK version -->
+                                <property>
+                                    <name>arq.ios.sdk</name>
+                                    <value>${env.IOS_SDK}</value>
+                                </property>
+                                <!-- local copy of Selenium SVN repository -->
+                                <property>
+                                    <name>arq.ios.drone.localSeleniumCopy</name>
+                                    <value>/Users/jboss/Workspace/selenium-read-only</value>
+                                </property>
+                                <property>
+                                    <name>arq.webdriver.remote.address</name>
+                                    <value>http://localhost:3001/wd/hub</value>
+                                </property>
+                                <property>
+                                    <name>arq.webdriver.remote</name>
+                                    <value>true</value>
+                                </property>
+                            </systemProperties>
+                        </configuration>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
