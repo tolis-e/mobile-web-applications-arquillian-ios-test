@@ -1,6 +1,10 @@
 # Kitchensink HTML5 iOS Functional Test
 This project contains the functional tests for the [Kitchensink HTML5 Mobile Demo](https://github.com/jboss-jdf/jboss-as-quickstart/tree/master/kitchensink-html5-mobile) project on iOS. The purpose of the project is to demonstrate how to test a mobile web application on iOS using the [Arquillian](http://arquillian.org/) testing platform. Note that the [Arquillian iOS Extension](https://github.com/arquillian/arquillian-extension-ios) is not released on the Maven Central repository yet and its XML configuration might **change** in the future.
 
+The project is configured to run on [TravisCI](https://travis-ci.org/). In each execution the test is executed on iPhone simulator and multiple SDKs (5.0, 5.1, 6.0, 6.1).
+
+[![Build Status](https://travis-ci.org/tolis-e/mobile-web-applications-arquillian-ios-test.png?branch=master)](https://travis-ci.org/tolis-e/aerogear-controller-demo-travis-ci)
+
 The [Arquillian](http://arquillian.org/) testing platform is used to enable the testing automation. Arquillian integrates transparently with the testing framework which is JUnit in this case.
 
 You can find [here](https://vimeo.com/66230461) a relevant video which shows the execution of the current project through [Jenkins CI](http://jenkins-ci.org/). Mac OS does not support the running of multiple iOS simulators at the same time. A possible way to cope with this limitation is to use a plugin which locks the Jenkins iOS jobs so that they are not executed simultaneously. However there are other alternative ways to accomplish the serial jobs execution. 

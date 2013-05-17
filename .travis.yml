@@ -1,0 +1,41 @@
+language: objective-c
+jdk: openjdk7
+before_install:
+  - echo "before install begin"
+  - echo "cloning arquillian ios.."
+  - git clone https://github.com/arquillian/arquillian-extension-ios.git
+  - echo "arquillian-ios cloned"
+  - cd arquillian-extension-ios/
+  - echo "installing arquillian ios.."
+  - sudo mvn install
+  - echo "arquillian ios installed"
+  - cd ..
+install:
+  - echo "install phase"
+before_script:
+  - echo "before script phase"
+script:
+  - export IOS_FAMILY=iphone;IOS_SDK=5.0
+  - echo $IOS_FAMILY
+  - echo $IOS_SDK
+  - sudo mvn test
+  - export IOS_FAMILY=iphone;IOS_SDK=5.1
+  - echo $IOS_FAMILY
+  - echo $IOS_SDK
+  - sudo mvn test
+  - export IOS_FAMILY=iphone;IOS_SDK=6.0
+  - echo $IOS_FAMILY
+  - echo $IOS_SDK
+  - sudo mvn test
+  - export IOS_FAMILY=iphone;IOS_SDK=6.1
+  - echo $IOS_FAMILY
+  - echo $IOS_SDK
+  - sudo mvn test
+
+
+
+
+
+
+
+

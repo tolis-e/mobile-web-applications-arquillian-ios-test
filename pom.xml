@@ -73,12 +73,12 @@
                             <!-- Value should be iphone or ipad -->
                             <property>
                                 <name>arq.ios.family</name>
-                                <value>iphone</value>
+                                <value>${env.IOS_FAMILY}</value>
                             </property>
                             <!-- SDK version -->
                             <property>
                                 <name>arq.ios.sdk</name>
-                                <value>6.0</value>
+                                <value>${env.IOS_SDK}</value>
                             </property>
                             <!-- local copy of Selenium SVN repository -->
                             <property>
