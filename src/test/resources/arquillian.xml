@@ -33,7 +33,7 @@
     </container>
 
     <!-- Configuration to be used when the JBoss managed profile is active -->
-    <container qualifier="jboss-managed">
+    <container qualifier="jboss-managed" default="true">
         <configuration>
             <property name="jbossHome">${basedir}/target/jboss-as-7.1.1.Final</property>
             <!-- <property name="managementAddress">192.168.0.1</property> -->
