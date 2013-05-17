@@ -67,34 +67,6 @@
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.12</version>
-                    <configuration>
-                        <systemProperties>
-                            <!-- You can pass the values dynamically as environment variables or options instead of hardcoding them. -->
-                            <!-- Value should be iphone or ipad -->
-                            <property>
-                                <name>arq.ios.family</name>
-                                <value>${env.IOS_FAMILY}</value>
-                            </property>
-                            <!-- SDK version -->
-                            <property>
-                                <name>arq.ios.sdk</name>
-                                <value>${env.IOS_SDK}</value>
-                            </property>
-                            <!-- local copy of Selenium SVN repository -->
-                            <property>
-                                <name>arq.ios.drone.localSeleniumCopy</name>
-                                <value>/Users/jboss/Workspace/selenium-read-only</value>
-                            </property>
-                            <property>
-                                <name>arq.webdriver.remote.address</name>
-                                <value>http://localhost:3001/wd/hub</value>
-                            </property>
-                            <property>
-                                <name>arq.webdriver.remote</name>
-                                <value>true</value>
-                            </property>
-                        </systemProperties>
-                    </configuration>
                 </plugin>
                 <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
                 <plugin>
@@ -200,34 +172,54 @@
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
                         <version>2.12</version>
-                        <configuration>
-                            <systemProperties>
-                                <!-- You can pass the values dynamically as environment variables or options instead of hardcoding them. -->
-                                <!-- Value should be iphone or ipad -->
-                                <property>
-                                    <name>arq.ios.family</name>
-                                    <value>${env.IOS_FAMILY}</value>
-                                </property>
-                                <!-- SDK version -->
-                                <property>
-                                    <name>arq.ios.sdk</name>
-                                    <value>${env.IOS_SDK}</value>
-                                </property>
-                                <!-- local copy of Selenium SVN repository -->
-                                <property>
-                                    <name>arq.ios.drone.localSeleniumCopy</name>
-                                    <value>/Users/jboss/Workspace/selenium-read-only</value>
-                                </property>
-                                <property>
-                                    <name>arq.webdriver.remote.address</name>
-                                    <value>http://localhost:3001/wd/hub</value>
-                                </property>
-                                <property>
-                                    <name>arq.webdriver.remote</name>
-                                    <value>true</value>
-                                </property>
-                            </systemProperties>
-                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>default-test</id>
+                                <configuration>
+                                    <skip>true</skip>
+                                </configuration>
+                            </execution>
+                            <!-- iPhone 5.0 -->
+                            <execution>
+                                <id>iPhone-5.0</id>
+                                <goals>
+                                    <goal>test</goal>
+                                </goals>
+                                <phase>test</phase>
+                                <configuration>
+                                    <systemPropertyVariables>
+                                        <!-- Value should be iphone or ipad -->
+                                        <arq.ios.family>iphone</arq.ios.family>
+                                        <!-- SDK version -->
+                                        <arq.ios.sdk>5.0</arq.ios.sdk>
+                                        <!-- local copy of Selenium SVN repository -->
+                                        <arq.ios.drone.localSeleniumCopy>/Users/jboss/Workspace/selenium-read-only</arq.ios.drone.localSeleniumCopy>
+                                        <arq.webdriver.remote.address>http://localhost:3001/wd/hub<arq.webdriver.remote.address>
+                                        <arq.webdriver.remote>true</arq.webdriver.remote>
+                                    </systemPropertyVariables>
+                                </configuration>
+                            </execution>
+                            <!-- iPhone 6.1 -->
+                            <execution>
+                                <id>iPhone-6.1</id>
+                                <goals>
+                                    <goal>test</goal>
+                                </goals>
+                                <phase>test</phase>
+                                <configuration>
+                                    <systemPropertyVariables>
+                                        <!-- Value should be iphone or ipad -->
+                                        <arq.ios.family>iphone</arq.ios.family>
+                                        <!-- SDK version -->
+                                        <arq.ios.sdk>6.1</arq.ios.sdk>
+                                        <!-- local copy of Selenium SVN repository -->
+                                        <arq.ios.drone.localSeleniumCopy>/Users/jboss/Workspace/selenium-read-only</arq.ios.drone.localSeleniumCopy>
+                                        <arq.webdriver.remote.address>http://localhost:3001/wd/hub<arq.webdriver.remote.address>
+                                        <arq.webdriver.remote>true</arq.webdriver.remote>
+                                    </systemPropertyVariables>
+                                </configuration>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>

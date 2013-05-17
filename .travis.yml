@@ -1,10 +1,5 @@
 language: objective-c
 jdk: openjdk7
-env:
-  - IOS_FAMILY=iphone IOS_SDK=5.0
-  - IOS_FAMILY=iphone IOS_SDK=5.1
-  - IOS_FAMILY=iphone IOS_SDK=6.0
-  - IOS_FAMILY=iphone IOS_SDK=6.1
 before_install:
   - echo "before install begin"
   - echo "cloning arquillian ios.."
